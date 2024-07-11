@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='output.css'>
+</head>
+
+<body>
+    <main>
+
+        <form action="#">
+
+            <div style="background-image: url('pictures/formBg.jpg');"
+                class=" bg-cover w-full h-screen  bg-no-repeat flex flex-col justify-center items-center">
+                <div class="flex justify-between w-[70%] h-[85%] bg-white">
+                    <div class="bg-white drop-shadow-2xl border w-[40%] h-[30rem] m-auto p-3">
+
+                            <h1 class="text-5xl font-bold ">Login</h1>
+                            <p class=" pt-2  text-gray-600">Doesn't have an account yet ? <a
+                                    class="text-blue-700 hover:text-blue-950 cursor-pointer underline " href="#">Sign
+                                    up</a></p>
+
+                            <div class="flex flex-col mt-7 ">
+                                <label for="username" class="font-semibold">Username</label>
+                                <input id="username" placeholder="Enter Username" type="text"
+                                    class="w-[90%] h-12 border p-3 outline-none  border-gray-500 rounded-lg" required>
+                            </div>
+
+                            <div class="flex flex-col ">
+                                <label for="Password" class="font-semibold">Password</label>
+                                <input id="Password" placeholder="Enter the password" type="password"
+                                    class="w-[90%] h-12 border p-3 outline-none  border-gray-500 rounded-lg" required>
+                            </div>
+
+                            <div class="mt-4 ">
+                                <div class="flex items-center  ">
+                                    <p class="p-2 my-2 border-4 border-black w-[60%] text-3xl line-through" id="captcha">Captcha </p>
+                                    <img src="pictures/refreshIcon.png" alt="refresh"
+                                        class="w-12 ml-3 h-12 border-4 cursor-pointer border-black "
+                                        onclick="generateCaptcha()">
+                                    <button onclick=" validateCaptcha()"
+                                        class="bg-indigo-800 ml-2 text-white font-bold hover:bg-indigo-950 border-gray-600  border-2">
+                                        Verify Captcha</button>
+                                </div>
+                                <input type="text" placeholder="Enter Captcha" id="captchaInput"
+                                    class="bg-transparent border-b outline-none pl-2 w-[90%]" required>
+                                <p id="captchaResult"></p>
+                            </div>
+
+                            <div class="mt-2 ">
+                                <button
+                                    class="w-[90%] ml-3 p-2 bg-indigo-800 outline-none text-white text-xl hover:bg-indigo-950">Login</button>
+                            </div>
+
+
+
+
+                    </div>
+                    
+                    <img src="pictures/work.jpg" alt="image" class="">
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+    <script src='login.js'></script>
+
+
+
+</body>
+
+</html>
